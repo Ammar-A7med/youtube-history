@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --background-color: #f4f4f4;
+      --text-color: #333;
+      --delete-color: #dc3545;
+    }
+    
+    body {
+      width: 400px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    
+    .container {
+      padding: 15px;
+    }
+    
+    .header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 15px 15px;
+    }
+    
+    .video-list {
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    
+    .video-item {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .video-item:hover {
+      transform: scale(1.02);
+    }
+    
+    .delete-btn {
+      background-color: var(--delete-color);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .delete-btn:hover {
+      background-color: #c82333;
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    .delete-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .tabs {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    
+    .tab {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease;
+    }
+    
+    .tab.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>YouTube Playback Manager</h2>
+    <button id="exportLog">Export</button>
+  </div>
+  
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" data-tab="playing">Playing</div>
+      <div class="tab" data-tab="incomplete">Incomplete</div>
+      <div class="tab" data-tab="complete">Complete</div>
+    </div>
+    
+    <div id="videoList" class="video-list"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

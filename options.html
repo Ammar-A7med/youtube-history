@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Playback Manager Settings</title>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --background-color: #f4f4f4;
+      --text-color: #333;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--background-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .shortcut-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>Customize Shortcuts</h2>
+      <div class="shortcut-container">
+        <button id="openShortcuts" class="btn">Modify Shortcuts</button>
+        <span>Video Restore Shortcut (Ctrl+Z)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Upcoming Improvements</h2>
+      <ul>
+        <li>✨ Cross-device Data Synchronization</li>
+        <li>🎥 Support for Additional Video Platforms</li>
+        <li>🕒 Automatic Time Restoration</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

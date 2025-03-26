@@ -1,0 +1,14 @@
+{
+    "extensionName": {
+        "message": "YouTube Playback Manager",
+        "description": "Name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Manage YouTube viewing time and restore playback",
+        "description": "Description of the extension"
+    },
+    "restoreTimeDescription": {
+        "message": "Restore last saved time",
+        "description": "Description of the restore time command"
+    }
+}
